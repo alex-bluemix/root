@@ -7,4 +7,6 @@ apt-get -y install screen mongodb nginx curl
 locale-gen en_US en_US.UTF-8
 dpkg-reconfigure locales
 
+apt-get install -y software-properties-common python-software-properties
+apt-get install -y ffmpeg2theora ffmpegthumbnailer
 

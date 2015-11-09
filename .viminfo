@@ -8,30 +8,31 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0/www
+~MSle0~/launch
 
 # Last Substitute Search Pattern:
-~MSle0~&www.pointlook
+~MSle0&www.pointlook
 
 # Last Substitute String:
 $wix.pointlook
 
 # Command Line History (newest to oldest):
 :wq!
-:q!
 :q
+:wq
+:q!
 :n
 :59
 :g/www/s/www.pointlook/wix.pointlook/g
 :1
 :g/mypigbank/s/mypigbank/pointlook/g
 :set paste
-:wq
 :g/atari/s/atari/wix/g
 :g/alex2006hw/s/alex2006hw/pointlook/g
 :w
 
 # Search String History (newest to oldest):
+?/launch
 ? www.pointlook
 ? mypigbank
 ? atari
@@ -44,15 +45,23 @@ $wix.pointlook
 # Input Line History (newest to oldest):
 
 # Registers:
-"1	LINE	0
-	www.com-template
+""1	LINE	0
+	apt-get install -y software-properties-common python-software-properties
 "2	LINE	0
-	dev/*
+	
 "3	LINE	0
-	shared/log/*
+	if [ $(cat /etc/*-release | grep "DISTRIB_CODENAME=" | cut -d "=" -f2) == 'trusty' ]; 
+	then  sudo add-apt-repository 'deb  http://ppa.launchpad.net/jon-severinsson/ffmpeg/ubuntu trusty main'  && sudo add-apt-repository 'deb  http://ppa.launchpad.net/jon-severinsson/ffmpeg/ubuntu saucy main'  && sudo apt-get update  
+	fi
 "4	LINE	0
-	log/*
+	www.com-template
 "5	LINE	0
+	dev/*
+"6	LINE	0
+	shared/log/*
+"7	LINE	0
+	log/*
+"8	LINE	0
 	8080 : alex2006hw
 	8081 : zergut2012
 	8082 : mypigbank
@@ -65,32 +74,33 @@ $wix.pointlook
 	8089 : login.alex2006hw.com
 	9000 : file.alex2006hw.com
 	9001 : www.simplekarma.net
-"6	LINE	0
-	.ssh
-"7	LINE	0
-	scripts
-"8	LINE	0
-	README.md
 "9	LINE	0
-	.viminfo
-""-	CHAR	0
+	.ssh
+"-	CHAR	0
 	sudo 
 
 # File marks:
-'0  8  0  ~/scripts/installTools.sh
-'1  2  43  ~/scripts/installTools.sh
-'2  24  0  /home/www/.gitignore
-'3  20  0  /etc/nginx/sites-enabled/wix.pointlook.com-443
-'4  37  4  /etc/nginx/sites-enabled/wix.pointlook.com-80
-'5  61  2  /etc/nginx/sites-enabled/default
-'6  5  10  /home/configs/.git/TAG_EDITMSG
-'7  1  0  /home/configs/README.md
-'8  23  0  /home/configs/nginx/nginx.conf
-'9  1  12  /home/configs/nginx/nginx.conf
+'0  12  0  ~/scripts/installTools.sh
+'1  131  0  /etc/fail2ban/jail.conf
+'2  36  16  /etc/apt/sources.list
+'3  1  0  /etc/apt/sources.list
+'4  13  0  ~/scripts/installTools.sh
+'5  12  0  ~/scripts/installTools.sh
+'6  8  0  ~/scripts/installTools.sh
+'7  2  43  ~/scripts/installTools.sh
+'8  24  0  /home/www/.gitignore
+'9  20  0  /etc/nginx/sites-enabled/wix.pointlook.com-443
 
 # Jumplist (newest first):
--'  8  0  ~/scripts/installTools.sh
+-'  12  0  ~/scripts/installTools.sh
+-'  13  0  ~/scripts/installTools.sh
 -'  1  0  ~/scripts/installTools.sh
+-'  131  0  /etc/fail2ban/jail.conf
+-'  1  0  /etc/fail2ban/jail.conf
+-'  36  16  /etc/apt/sources.list
+-'  37  21  /etc/apt/sources.list
+-'  1  0  /etc/apt/sources.list
+-'  8  0  ~/scripts/installTools.sh
 -'  2  43  ~/scripts/installTools.sh
 -'  24  0  /home/www/.gitignore
 -'  1  0  /home/www/.gitignore
@@ -127,7 +137,6 @@ $wix.pointlook
 -'  1  0  ~/.git/config
 -'  4  0  ~/.gitignore
 -'  5  55  ~/scripts/installTools.sh
--'  11  51  ~/scripts/installTools.sh
 -'  4  50  ~/scripts/installTools.sh
 -'  1  0  /home/alex/.ssh/authorized_keys
 -'  4  0  ~/README.md
@@ -177,46 +186,35 @@ $wix.pointlook
 -'  1  0  ~/README.md
 -'  4  0  ~/README.md
 -'  1  0  ~/README.md
--'  4  0  ~/README.md
--'  1  0  ~/README.md
--'  4  0  ~/README.md
--'  1  0  ~/README.md
--'  4  0  ~/README.md
--'  1  0  ~/README.md
--'  4  0  ~/README.md
--'  1  0  ~/README.md
--'  4  0  ~/README.md
--'  1  0  ~/README.md
 
 # History of marks within files (newest to oldest):
 
 > ~/scripts/installTools.sh
-	"	8	0
-	^	10	0
-	.	8	0
+	"	12	0
+	.	10	0
 	+	2	39
 	+	4	52
-	+	11	161
+	+	13	161
 	+	2	39
-	+	11	21
-	+	11	134
+	+	13	21
+	+	13	134
 	+	1	0
 	+	2	0
 	+	4	0
-	+	11	0
-	+	11	166
-	+	11	20
-	+	11	0
-	+	11	0
+	+	13	0
+	+	13	166
+	+	13	20
+	+	13	0
+	+	13	0
 	+	5	0
 	+	4	50
-	+	11	10
-	+	11	0
+	+	13	10
+	+	13	0
 	+	5	55
 	+	1	0
 	+	2	0
 	+	4	0
-	+	11	0
+	+	13	0
 	+	4	0
 	+	5	56
 	+	2	43
@@ -224,6 +222,21 @@ $wix.pointlook
 	+	9	0
 	+	7	0
 	+	8	0
+	+	11	50
+	+	12	18
+	+	12	0
+	+	13	0
+	+	12	0
+	+	10	0
+
+> /etc/fail2ban/jail.conf
+	"	131	0
+
+> /etc/apt/sources.list
+	"	36	16
+	^	36	1
+	.	36	0
+	+	36	0
 
 > /home/www/.gitignore
 	"	24	0
