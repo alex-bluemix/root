@@ -1,0 +1,2 @@
+# root
+root home account
