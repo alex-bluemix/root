@@ -2,18 +2,40 @@
 # You may edit it if you're careful!
 
 # Value of 'encoding' when this file was written
-*encoding=latin1
+*encoding=utf-8
 
 
 # hlsearch on (H) or off (h):
 ~h
+# Last Search Pattern:
+~MSle0/www
+
+# Last Substitute Search Pattern:
+~MSle0~&www.pointlook
+
+# Last Substitute String:
+$wix.pointlook
+
 # Command Line History (newest to oldest):
-:q!
 :wq!
-:w
+:q!
 :q
+:n
+:59
+:g/www/s/www.pointlook/wix.pointlook/g
+:1
+:g/mypigbank/s/mypigbank/pointlook/g
+:set paste
+:wq
+:g/atari/s/atari/wix/g
+:g/alex2006hw/s/alex2006hw/pointlook/g
+:w
 
 # Search String History (newest to oldest):
+? www.pointlook
+? mypigbank
+? atari
+? alex2006hw
 
 # Expression History (newest to oldest):
 
@@ -22,49 +44,90 @@
 # Input Line History (newest to oldest):
 
 # Registers:
-""1	LINE	0
-	.ssh
+"1	LINE	0
+	www.com-template
 "2	LINE	0
-	scripts
+	dev/*
 "3	LINE	0
-	README.md
+	shared/log/*
 "4	LINE	0
-	.viminfo
+	log/*
 "5	LINE	0
-	.profile
+	8080 : alex2006hw
+	8081 : zergut2012
+	8082 : mypigbank
+	8083 : cobjet
+	8084 : responsiblehuman
+	8085 : 2bees
+	8086 : davisholding
+	8087 : usertoken
+	8088 : talentbee.salondeunion.com
+	8089 : login.alex2006hw.com
+	9000 : file.alex2006hw.com
+	9001 : www.simplekarma.net
 "6	LINE	0
-	.gitignore
+	.ssh
 "7	LINE	0
-	.git
+	scripts
 "8	LINE	0
-	.bashrc
+	README.md
 "9	LINE	0
-	..
-"-	CHAR	0
-	#
+	.viminfo
+""-	CHAR	0
+	sudo 
 
 # File marks:
-'0  3  0  ~/.gitignore
-'1  2  0  ~/.git/config
-'2  4  0  ~/.gitignore
-'3  6  0  ~/scripts/installTools.sh
-'4  5  55  ~/scripts/installTools.sh
-'5  7  51  ~/scripts/installTools.sh
-'6  4  50  ~/scripts/installTools.sh
-'7  1  0  /home/alex/.ssh/authorized_keys
-'8  7  0  ~/scripts/installTools.sh
-'9  7  20  ~/scripts/installTools.sh
+'0  8  0  ~/scripts/installTools.sh
+'1  2  43  ~/scripts/installTools.sh
+'2  24  0  /home/www/.gitignore
+'3  20  0  /etc/nginx/sites-enabled/wix.pointlook.com-443
+'4  37  4  /etc/nginx/sites-enabled/wix.pointlook.com-80
+'5  61  2  /etc/nginx/sites-enabled/default
+'6  5  10  /home/configs/.git/TAG_EDITMSG
+'7  1  0  /home/configs/README.md
+'8  23  0  /home/configs/nginx/nginx.conf
+'9  1  12  /home/configs/nginx/nginx.conf
 
 # Jumplist (newest first):
+-'  8  0  ~/scripts/installTools.sh
+-'  1  0  ~/scripts/installTools.sh
+-'  2  43  ~/scripts/installTools.sh
+-'  24  0  /home/www/.gitignore
+-'  1  0  /home/www/.gitignore
+-'  20  0  /etc/nginx/sites-enabled/wix.pointlook.com-443
+-'  1  0  /etc/nginx/sites-enabled/wix.pointlook.com-443
+-'  37  4  /etc/nginx/sites-enabled/wix.pointlook.com-80
+-'  1  0  /etc/nginx/sites-enabled/wix.pointlook.com-80
+-'  61  2  /etc/nginx/sites-enabled/default
+-'  1  0  /etc/nginx/sites-enabled/default
+-'  5  10  /home/configs/.git/TAG_EDITMSG
+-'  1  0  /home/configs/.git/TAG_EDITMSG
+-'  1  0  /home/configs/README.md
+-'  23  0  /home/configs/nginx/nginx.conf
+-'  1  0  /home/configs/nginx/nginx.conf
+-'  2  0  /home/www/shared/log/.gitignore
+-'  1  0  /home/www/shared/log/.gitignore
+-'  2  0  /home/www/shared/.gitignore
+-'  1  0  /home/www/shared/.gitignore
+-'  4  22  /home/configs/nginx/sites-available/README.md
+-'  5  0  /home/configs/nginx/sites-available/README.md
+-'  1  0  /home/configs/nginx/sites-available/README.md
+-'  44  39  /home/configs/nginx/sites-available/wix.pointlook.com-443
+-'  50  4  /home/configs/nginx/sites-available/wix.pointlook.com-443
+-'  1  0  /home/configs/nginx/sites-available/wix.pointlook.com-443
+-'  53  0  /home/configs/nginx/sites-available/wix.pointlook.com-443
+-'  51  0  /home/configs/nginx/sites-available/wix.pointlook.com
+-'  48  4  /home/configs/nginx/sites-available/wix.pointlook.com
+-'  1  0  /home/configs/nginx/sites-available/wix.pointlook.com
+-'  1  9  ~/installRoot.sh
+-'  6  0  ~/scripts/installTools.sh
 -'  3  0  ~/.gitignore
 -'  1  0  ~/.gitignore
 -'  2  0  ~/.git/config
 -'  1  0  ~/.git/config
 -'  4  0  ~/.gitignore
--'  6  0  ~/scripts/installTools.sh
--'  1  0  ~/scripts/installTools.sh
 -'  5  55  ~/scripts/installTools.sh
--'  7  51  ~/scripts/installTools.sh
+-'  11  51  ~/scripts/installTools.sh
 -'  4  50  ~/scripts/installTools.sh
 -'  1  0  /home/alex/.ssh/authorized_keys
 -'  4  0  ~/README.md
@@ -124,38 +187,121 @@
 -'  1  0  ~/README.md
 -'  4  0  ~/README.md
 -'  1  0  ~/README.md
--'  4  0  ~/README.md
--'  1  0  ~/README.md
--'  4  0  ~/README.md
--'  1  0  ~/README.md
--'  4  0  ~/README.md
--'  1  0  ~/README.md
--'  4  0  ~/README.md
--'  1  0  ~/README.md
--'  4  0  ~/README.md
--'  1  0  ~/README.md
--'  4  0  ~/README.md
--'  1  0  ~/README.md
--'  4  0  ~/README.md
--'  1  0  ~/README.md
--'  4  0  ~/README.md
--'  1  0  ~/README.md
--'  4  0  ~/README.md
--'  1  0  ~/README.md
--'  4  0  ~/README.md
--'  1  0  ~/README.md
--'  4  0  ~/README.md
--'  1  0  ~/README.md
--'  4  0  ~/README.md
--'  1  0  ~/README.md
--'  4  0  ~/README.md
--'  1  0  ~/README.md
--'  4  0  ~/README.md
--'  1  0  /home/alex/.ssh/authorized_keys
--'  4  0  ~/README.md
--'  1  0  ~/README.md
 
 # History of marks within files (newest to oldest):
+
+> ~/scripts/installTools.sh
+	"	8	0
+	^	10	0
+	.	8	0
+	+	2	39
+	+	4	52
+	+	11	161
+	+	2	39
+	+	11	21
+	+	11	134
+	+	1	0
+	+	2	0
+	+	4	0
+	+	11	0
+	+	11	166
+	+	11	20
+	+	11	0
+	+	11	0
+	+	5	0
+	+	4	50
+	+	11	10
+	+	11	0
+	+	5	55
+	+	1	0
+	+	2	0
+	+	4	0
+	+	11	0
+	+	4	0
+	+	5	56
+	+	2	43
+	+	8	29
+	+	9	0
+	+	7	0
+	+	8	0
+
+> /home/www/.gitignore
+	"	24	0
+	.	25	0
+	+	25	0
+
+> /etc/nginx/sites-enabled/wix.pointlook.com-443
+	"	20	0
+
+> /etc/nginx/sites-enabled/wix.pointlook.com-80
+	"	37	4
+
+> /etc/nginx/sites-enabled/default
+	"	61	2
+	^	61	3
+	.	61	2
+	+	59	2
+	+	61	2
+
+> /home/configs/.git/TAG_EDITMSG
+	"	5	10
+	^	5	11
+	.	5	10
+	+	5	10
+
+> /home/configs/README.md
+	"	1	0
+
+> /home/configs/nginx/nginx.conf
+	"	23	0
+	^	23	1
+	.	23	0
+	+	1	12
+	+	23	0
+
+> /home/www/shared/log/.gitignore
+	"	2	0
+	^	2	0
+	.	1	5
+	+	1	5
+
+> /home/www/shared/.gitignore
+	"	2	0
+	.	2	0
+	+	2	0
+
+> /home/configs/nginx/sites-available/README.md
+	"	4	22
+	^	4	23
+	.	4	22
+	+	5	0
+	+	4	22
+
+> /home/configs/nginx/sites-available/wix.pointlook.com-443
+	"	44	39
+	^	44	40
+	.	44	39
+	+	53	0
+	+	50	0
+	+	50	0
+	+	7	49
+	+	8	48
+	+	25	36
+	+	44	39
+
+> /home/configs/nginx/sites-available/wix.pointlook.com
+	"	51	0
+	^	51	1
+	.	48	0
+	+	51	0
+	+	48	0
+	+	48	0
+
+> ~/installRoot.sh
+	"	1	9
+	^	1	10
+	.	1	9
+	+	1	9
 
 > ~/.gitignore
 	"	3	0
@@ -167,36 +313,6 @@
 
 > ~/.git/config
 	"	2	0
-
-> ~/scripts/installTools.sh
-	"	6	0
-	^	6	0
-	.	5	56
-	+	2	39
-	+	4	52
-	+	7	161
-	+	2	39
-	+	7	21
-	+	7	134
-	+	1	0
-	+	2	0
-	+	4	0
-	+	7	0
-	+	7	166
-	+	7	20
-	+	7	0
-	+	7	0
-	+	5	0
-	+	4	50
-	+	7	10
-	+	7	0
-	+	5	55
-	+	1	0
-	+	2	0
-	+	4	0
-	+	7	0
-	+	4	0
-	+	5	56
 
 > /home/alex/.ssh/authorized_keys
 	"	1	0
