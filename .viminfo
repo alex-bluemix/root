@@ -8,30 +8,40 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/launch
+~MSle0/local
 
 # Last Substitute Search Pattern:
-~MSle0&www.pointlook
+~MSle0~&local
 
 # Last Substitute String:
-$wix.pointlook
+$system
 
 # Command Line History (newest to oldest):
 :wq!
-:q
+:g/local/s/local/system/g
+:g/  /s/  //g
+:g/  /s/    / /g
+:1
+:g/OPT/s/OPT/local/g
 :wq
+:q
+:w
 :q!
 :n
 :59
 :g/www/s/www.pointlook/wix.pointlook/g
-:1
 :g/mypigbank/s/mypigbank/pointlook/g
 :set paste
 :g/atari/s/atari/wix/g
 :g/alex2006hw/s/alex2006hw/pointlook/g
-:w
 
 # Search String History (newest to oldest):
+? local
+?   
+?     
+? OPT
+?/force
+?/640
 ?/launch
 ? www.pointlook
 ? mypigbank
@@ -45,56 +55,163 @@ $wix.pointlook
 # Input Line History (newest to oldest):
 
 # Registers:
-""1	LINE	0
-	apt-get install -y software-properties-common python-software-properties
-"2	LINE	0
+"1	LINE	0
 	
+	NOTE: The object files are build at the place where configure is launched
+"2	LINE	0
+	Extra libraries configuration. You can turn a libray off or force using the local version in gpac/extra_lib/
 "3	LINE	0
-	if [ $(cat /etc/*-release | grep "DISTRIB_CODENAME=" | cut -d "=" -f2) == 'trusty' ]; 
-	then  sudo add-apt-repository 'deb  http://ppa.launchpad.net/jon-severinsson/ffmpeg/ubuntu trusty main'  && sudo add-apt-repository 'deb  http://ppa.launchpad.net/jon-severinsson/ffmpeg/ubuntu saucy main'  && sudo apt-get update  
-	fi
+	
+	Configuration options for libgpac - all options can be enabled with --enable-optname
+	  --disable-all            disables all features in libgpac
+	  --disable-3d             disable 3D rendering
+	  --disable-svg            disable SVG
+	  --disable-vrml           disable MPEG-4/VRML/X3D
+	  --disable-x3d            disable X3D only
+	  --disable-odf            disable full support of MPEG-4 OD Framework
+	  --disable-bifs           disable BIFS
+	  --disable-bifs-enc       disable BIFS coder
+	  --disable-laser          disable LASeR coder
+	  --disable-saf            disable SAF container
+	  --disable-seng           disable scene encoder engine
+	  --disable-qtvr           disable import of Cubic QTVR files
+	  --disable-avi            disable AVI
+	  --disable-ogg            disable OGG
+	  --disable-m2ps           disable MPEG2 PS
+	  --disable-m2ts           disable MPEG2 TS
+	  --disable-m2ts-mux       disable MPEG2 TS Multiplexer
+	  --disable-dvb4linux      disable dvb4linux support
+	  --disable-parsers        disable AV parsers
+	  --disable-import         disable media importers
+	  --disable-export         disable media exporters
+	  --disable-swf            disable SWF import
+	  --disable-scene-stats    disable scene graph statistics
+	  --disable-scene-dump     disable scene graph dump
+	  --disable-scene-encode   disable BIFS & LASeR to ISO File Format encoding
+	  --disable-loader-isoff   disable scene loading from ISO File Format
+	  --disable-loader-bt      disable scene loading from ISO File Format
+	  --disable-loader-xmt     disable scene loading from ISO File Format
+	  --disable-od-dump        disable OD dump
+	  --disable-isom-dump      disable ISOM dump
+	  --disable-mcrypt         disable mcrypt
+	  --disable-isoff          disable ISO File Format
+	  --disable-isoff-write    disable ISO File Format edit/write
+	  --disable-isoff-hint     disable ISO File Format hinting
+	  --disable-isoff-frag     disable fragments in ISO File Format
+	  --disable-isoff-hds      disable HDS support in ISO File Format
+	  --disable-streaming      disable RTP/RTSP/SDP
+	  --disable-dvbx           disable DVB-specific tools (MPE, FEC, DSM-CC)
+	  --disable-vobsub         disable VobSub support
+	  --disable-sman           disable scene manager
+	  --disable-ttxt           disable TTXT (3GPP / MPEG-4 Timed Text) support
+	  --disable-player         disable player (terminal and compositor)
+	  --disable-scenegraph     disable scenegraph, scene parsers and player (terminal and compositor)
+	  --disable-hevc           disable HEVC support
 "4	LINE	0
-	www.com-template
+	
 "5	LINE	0
-	dev/*
+	
+	GPAC configuration options:
+	  --help                   print this message
+	  --prefix=PREFIX          install in PREFIX [/usr/local]
+	  --mandir=DIR             man documentation in DIR [PREFIX/man]
+	
+	  --verbose                enable verbose building [no]
+	  --source-path=PATH       path of source code []
+	  --cross-prefix=PREFIX    use PREFIX for compile tools []
+	  --target-os=TARGETOS     use TARGETOS for compile tools []
+	  --cc=CC                  use C   compiler CC  []
+	  --cxx=CXX                use C++ compiler CXX []
+	  --make=MAKE              use specified make [make]
+	  --extra-cflags=ECFLAGS   add ECFLAGS to CFLAGS []
+	  --extra-ldflags=ELDFLAGS add ELDFLAGS to LDFLAGS []
+	  --extra-libs=ELIBS       add ELIBS []
+	  --cpu=CPU                force cpu to CPU  [x86_64]
+	  --sdl-cfg=SDL_PATH       specify path to sdl-config for local install []
+	  --enable-sdl-static      use static SDL linking [default=no]
+	  --X11-path=X11_PATH      specify path for X11 includes and libraries [/usr/X11R6]
+	  --dxsdk-path=DX_PATH     specify directX SDK for MinGW []
+	  --xulsdk-path=XUL_PATH   specify Mozilla XUL (Gecko) SDK include path [/usr/lib/xulrunner/sdk/include]
+	  --mozdir=MOZ_PATH        specify mozilla main directory path for system install
+	  --extra-ff-ldflags=ELDFLAGS add ELDFLAGS to FFMPEG LDFLAGS []
+	
+	  --enable-debug           produce debug version
+	  --enable-gprof           enable profiling
+	  --enable-gcov            enable coverage
+	  --enable-pic             enable Position Independant Code for shared objects
+	  --strip                  enable strip
+	  --std-allocator          uses standard lib memory allocator
+	  --static-modules         includes static modules in libgpac whenever possible
+	  --enable-mem-track       enable tracking of all memory allocated by gpac
+	  --disable-opt            disable GCC optimizations
+	  --disable-ipv6           disable IPV6 support
+	  --disable-wx             disable wxWidgets support
+	  --disable-platinum       disable Platinum UPnP support
+	  --disable-alsa           disable Alsa audio
+	  --disable-oss-audio      disable OSS audio
+	  --enable-jack            enable  Jack audio
+	  --disable-jack           disable Jack audio
+	  --enable-pulseaudio      enable  Pulse audio
+	  --disable-pulseaudio     disable Pulse audio
+	  --disable-x11            disable X11
+	  --disable-x11-shm        disable X11 shared memory support
+	  --disable-x11-xv         disable X11 Xvideo support
+	  --enable-fixed-point     enable fixed-point math
+	  --enable-tinygl          enable TinyGL support
+	  --enable-joystick        enable joystick support
+	  --disable-ssl            disable OpenSSL support
 "6	LINE	0
-	shared/log/*
+	
+	Usage: configure [options]
+	Options: [defaults in brackets after descriptions]
 "7	LINE	0
-	log/*
+	
 "8	LINE	0
-	8080 : alex2006hw
-	8081 : zergut2012
-	8082 : mypigbank
-	8083 : cobjet
-	8084 : responsiblehuman
-	8085 : 2bees
-	8086 : davisholding
-	8087 : usertoken
-	8088 : talentbee.salondeunion.com
-	8089 : login.alex2006hw.com
-	9000 : file.alex2006hw.com
-	9001 : www.simplekarma.net
+	
+	#webm
+	#ffmpeg -i $FILE-cut.mov -c:v libvpx -crf 10 -b:v 1M -c:a libvorbis $FILE.webm
+	#
+	ffmpeg -i $FILE-cut.mov -c:v libvpx -pass 1 -an -f rawvideo -y /dev/null  # Generates ffmpeg2pass-0.log
+	ffmpeg -i $FILE-cut.mov -c:v libvpx -pass 2 -f webm -b:v 400K -crf 10 -an -y $FILE.webm
 "9	LINE	0
-	.ssh
-"-	CHAR	0
-	sudo 
+	
+	#png
+	ffmpeg -ss 4 -i $FILE-cut.mov -s:v 1280x720 -frames:v 1 -an $FILE.png
+""-	CHAR	0
+	force a52 (ac3) OPT=[no,system,local]
 
 # File marks:
-'0  12  0  ~/scripts/installTools.sh
-'1  131  0  /etc/fail2ban/jail.conf
-'2  36  16  /etc/apt/sources.list
-'3  1  0  /etc/apt/sources.list
-'4  13  0  ~/scripts/installTools.sh
-'5  12  0  ~/scripts/installTools.sh
-'6  8  0  ~/scripts/installTools.sh
-'7  2  43  ~/scripts/installTools.sh
-'8  24  0  /home/www/.gitignore
-'9  20  0  /etc/nginx/sites-enabled/wix.pointlook.com-443
+'0  1  0  ~/work/gpac/configure-me
+'1  15  10  ~/scripts/installTools.sh
+'2  6  3  ~/.gitignore
+'3  14  10  ~/scripts/installTools.sh
+'4  1  0  ~/mp42hls
+'5  1  0  ~/cutvideo
+'6  5  15  ~/mov2mp4
+'7  5  11  ~/mp42hls
+'8  18  131  ~/cutvideo
+'9  3  0  ~/cutvideo
 
 # Jumplist (newest first):
--'  12  0  ~/scripts/installTools.sh
--'  13  0  ~/scripts/installTools.sh
+-'  1  0  ~/work/gpac/configure-me
+-'  2  0  ~/work/gpac/configure-me
+-'  15  10  ~/scripts/installTools.sh
 -'  1  0  ~/scripts/installTools.sh
+-'  6  3  ~/.gitignore
+-'  1  0  ~/.gitignore
+-'  14  10  ~/scripts/installTools.sh
+-'  1  0  ~/mp42hls
+-'  1  0  ~/cutvideo
+-'  5  15  ~/mov2mp4
+-'  3  0  ~/mov2mp4
+-'  1  0  ~/mov2mp4
+-'  5  11  ~/mp42hls
+-'  18  131  ~/cutvideo
+-'  3  0  ~/cutvideo
+-'  14  18  ~/cutvideo
+-'  10  0  ~/cutvideo
+-'  12  0  ~/scripts/installTools.sh
+-'  16  0  ~/scripts/installTools.sh
 -'  131  0  /etc/fail2ban/jail.conf
 -'  1  0  /etc/fail2ban/jail.conf
 -'  36  16  /etc/apt/sources.list
@@ -132,7 +249,6 @@ $wix.pointlook
 -'  1  9  ~/installRoot.sh
 -'  6  0  ~/scripts/installTools.sh
 -'  3  0  ~/.gitignore
--'  1  0  ~/.gitignore
 -'  2  0  ~/.git/config
 -'  1  0  ~/.git/config
 -'  4  0  ~/.gitignore
@@ -154,67 +270,99 @@ $wix.pointlook
 -'  4  0  ~/README.md
 -'  1  0  ~/README.md
 -'  4  0  ~/README.md
--'  1  0  ~/README.md
--'  3  0  ~/scripts/installTools.sh
--'  4  0  ~/README.md
--'  1  0  ~/README.md
--'  4  0  ~/README.md
--'  1  0  ~/README.md
--'  4  0  ~/README.md
--'  1  0  ~/README.md
--'  4  0  ~/README.md
--'  1  0  ~/README.md
--'  4  0  ~/README.md
--'  1  0  ~/README.md
--'  4  0  ~/README.md
--'  1  0  ~/README.md
--'  4  0  ~/README.md
--'  1  0  ~/README.md
--'  4  0  ~/README.md
--'  1  0  ~/README.md
--'  4  0  ~/README.md
--'  1  0  ~/README.md
--'  4  0  ~/README.md
--'  1  0  ~/README.md
--'  4  0  ~/README.md
--'  1  0  ~/README.md
--'  4  0  ~/README.md
--'  1  0  ~/README.md
--'  4  0  ~/README.md
--'  1  0  ~/README.md
--'  4  0  ~/README.md
--'  1  0  ~/README.md
--'  4  0  ~/README.md
--'  1  0  ~/README.md
+-'  15  10  ~/scripts/installTools.sh
+-'  1  0  ~/scripts/installTools.sh
+-'  6  3  ~/.gitignore
+-'  1  0  ~/.gitignore
+-'  14  10  ~/scripts/installTools.sh
+-'  1  0  ~/mp42hls
+-'  1  0  ~/cutvideo
+-'  5  15  ~/mov2mp4
+-'  3  0  ~/mov2mp4
+-'  1  0  ~/mov2mp4
+-'  5  11  ~/mp42hls
+-'  18  131  ~/cutvideo
+-'  3  0  ~/cutvideo
+-'  14  18  ~/cutvideo
+-'  10  0  ~/cutvideo
+-'  12  0  ~/scripts/installTools.sh
+-'  16  0  ~/scripts/installTools.sh
 
 # History of marks within files (newest to oldest):
 
+> ~/work/gpac/configure-me
+	"	1	0
+	^	1	12
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	53
+	+	1	51
+	+	2	0
+	+	1	21
+	+	1	36
+	+	1	37
+	+	1	53
+	+	1	51
+	+	1	77
+	+	1	104
+	+	1	131
+	+	1	158
+	+	1	185
+	+	1	212
+	+	1	239
+	+	1	266
+	+	1	293
+	+	1	320
+	+	1	347
+	+	1	374
+	+	1	401
+	+	1	428
+	+	1	402
+	+	1	53
+	+	1	80
+	+	1	107
+	+	1	134
+	+	1	161
+	+	1	188
+	+	1	215
+	+	1	242
+	+	1	269
+	+	1	296
+	+	1	323
+	+	1	350
+	+	1	377
+	+	1	404
+	+	2	0
+	+	1	0
+
 > ~/scripts/installTools.sh
-	"	12	0
-	.	10	0
+	"	15	10
+	^	15	11
+	.	15	10
 	+	2	39
 	+	4	52
-	+	13	161
+	+	16	161
 	+	2	39
-	+	13	21
-	+	13	134
+	+	16	21
+	+	16	134
 	+	1	0
 	+	2	0
 	+	4	0
-	+	13	0
-	+	13	166
-	+	13	20
-	+	13	0
-	+	13	0
+	+	16	0
+	+	16	166
+	+	16	20
+	+	16	0
+	+	16	0
 	+	5	0
 	+	4	50
-	+	13	10
-	+	13	0
+	+	16	10
+	+	16	0
 	+	5	55
 	+	1	0
 	+	2	0
 	+	4	0
-	+	13	0
+	+	16	0
 	+	4	0
 	+	5	56
 	+	2	43
@@ -225,9 +373,64 @@ $wix.pointlook
 	+	11	50
 	+	12	18
 	+	12	0
-	+	13	0
+	+	16	0
 	+	12	0
 	+	10	0
+	+	14	23
+	+	15	10
+
+> ~/.gitignore
+	"	6	3
+	^	6	4
+	.	6	3
+	+	1	0
+	+	2	0
+	+	4	0
+	+	4	4
+	+	6	3
+
+> ~/mp42hls
+	"	1	0
+	^	5	121
+	.	5	120
+	+	1	108
+	+	2	0
+	+	5	108
+	+	4	16
+	+	5	14
+	+	5	120
+
+> ~/cutvideo
+	"	1	0
+	^	18	132
+	.	18	131
+	+	8	69
+	+	18	125
+	+	13	18
+	+	14	73
+	+	20	0
+	+	17	0
+	+	10	4
+	+	7	3
+	+	4	74
+	+	7	4
+	+	20	0
+	+	16	0
+	+	14	79
+	+	16	0
+	+	11	78
+	+	12	0
+	+	14	18
+	+	13	18
+	+	14	15
+	+	18	23
+	+	18	131
+
+> ~/mov2mp4
+	"	5	15
+	.	5	15
+	+	3	0
+	+	5	15
 
 > /etc/fail2ban/jail.conf
 	"	131	0
@@ -315,14 +518,6 @@ $wix.pointlook
 	^	1	10
 	.	1	9
 	+	1	9
-
-> ~/.gitignore
-	"	3	0
-	.	4	0
-	+	1	0
-	+	2	0
-	+	4	0
-	+	4	0
 
 > ~/.git/config
 	"	2	0

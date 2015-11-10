@@ -1,0 +1,1 @@
+./configure --enable-static-bin --static-mp4box --enable-depth --use-js=system--use-ft=system--use-zlib=system --use-jpeg=system --use-png=system --use-faad=system --use-mad=system --use-xvid=system --use-ffmpeg=system --use-ogg=system --use-vorbis=system --use-theora=system --use-openjpeg=system--use-a52=system 
