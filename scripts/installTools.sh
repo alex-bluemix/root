@@ -8,7 +8,7 @@ locale-gen en_US en_US.UTF-8
 dpkg-reconfigure locales
 
 apt-get install -y software-properties-common python-software-properties
-apt-get install -y ffmpeg2theora ffmpegthumbnailer
+apt-get install -y ffmpeg2theora ffmpegthumbnailer x264
 
 # mp4box install
 apt-get -y install gpac

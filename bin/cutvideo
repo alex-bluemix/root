@@ -1,0 +1,5 @@
+FILE=test
+[ $1 ] && FILE=$1
+
+#cut : forward 10sec, readin file, skip 1sec, cut next 4sec, output to file
+ffmpeg -ss 00:00:10 -i $FILE.mov -ss 00:00:01 -t 00:00:04 -c copy $FILE-cut.mov
